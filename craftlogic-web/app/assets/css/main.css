@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* Brand tokens — see section 6 of CRAFTLOGIC_PROJECT_PLAN.md */
+@theme {
+  --color-navy-950: #0B1222;
+  --color-navy-900: #0F172A;
+  --color-navy-800: #1E293B;
+  --color-navy-700: #334155;
+  --color-azure-600: #2563EB;
+  --color-azure-500: #3B82F6;
+  --color-azure-400: #60A5FA;
+  --color-teal-500: #14B8A6;
+  --color-teal-400: #2DD4BF;
+  --color-grey-200: #E5E7EB;
+  --color-grey-400: #94A3B8;
+  --color-danger-400: #F87171;
+
+  /* Self-hosted via @fontsource-variable (see nuxt.config.ts) */
+  --font-heading: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-navy-900 text-grey-200 font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading font-bold text-white tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-azure-500;
+  }
+}
+
+@layer components {
+  /* Subtle structured grid used behind heroes */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(51 65 85 / 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(51 65 85 / 0.25) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  }
+
+  /* Long-form copy (privacy policy, about) */
+  .prose-cl {
+    @apply max-w-3xl leading-relaxed text-grey-200;
+  }
+  .prose-cl h2 {
+    @apply mt-12 mb-4 text-2xl;
+  }
+  .prose-cl h3 {
+    @apply mt-8 mb-2 text-lg;
+  }
+  .prose-cl p,
+  .prose-cl ul,
+  .prose-cl ol {
+    @apply mb-4;
+  }
+  .prose-cl ul {
+    @apply list-disc space-y-1 pl-6;
+  }
+  .prose-cl a {
+    @apply text-azure-400 underline underline-offset-2 hover:text-white;
+  }
+  .prose-cl strong {
+    @apply font-semibold text-white;
+  }
+}
