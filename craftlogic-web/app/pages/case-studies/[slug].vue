@@ -33,7 +33,7 @@ usePageSeo({
             <h2 class="text-2xl">
               The problem
             </h2>
-            <p class="mt-3 text-grey-200">
+            <p class="mt-3 text-body">
               {{ study.problem }}
             </p>
           </div>
@@ -41,7 +41,7 @@ usePageSeo({
             <h2 class="text-2xl">
               The solution
             </h2>
-            <p class="mt-3 text-grey-200">
+            <p class="mt-3 text-body">
               {{ study.solution }}
             </p>
           </div>
@@ -57,7 +57,7 @@ usePageSeo({
               >
                 <BaseIcon
                   name="check"
-                  class="mt-0.5 size-5 shrink-0 text-teal-500"
+                  class="mt-0.5 size-5 shrink-0 text-accent"
                 />{{ r }}
               </li>
             </ul>
@@ -67,14 +67,14 @@ usePageSeo({
         <aside class="space-y-6">
           <CaseStudyMetrics :metrics="study.metrics" />
           <BaseCard>
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-grey-400">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-muted">
               Technology
             </h2>
             <ul class="mt-3 flex flex-wrap gap-2">
               <li
                 v-for="t in study.stack"
                 :key="t"
-                class="rounded-full border border-navy-700 px-3 py-1 text-sm"
+                class="rounded-full border border-line-strong px-3 py-1 text-sm"
               >
                 {{ t }}
               </li>
@@ -85,7 +85,7 @@ usePageSeo({
 
       <NuxtLink
         to="/case-studies"
-        class="mt-12 inline-block text-sm text-azure-400 hover:text-white"
+        class="mt-12 inline-block text-sm text-link hover:text-ink"
       >
         ← All case studies
       </NuxtLink>

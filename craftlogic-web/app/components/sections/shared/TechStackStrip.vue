@@ -7,16 +7,16 @@ import { techStack } from '~/constants/tech-stack'
     <li
       v-for="t in techStack"
       :key="t.name"
-      class="rounded-lg border border-navy-700 bg-navy-800/60 p-4"
+      class="rounded-lg border border-line-strong bg-surface-raised/60 p-4"
     >
       <BaseIcon
         :name="t.icon"
-        class="size-5 text-teal-500"
+        class="size-5 text-accent"
       />
-      <p class="mt-3 text-sm font-semibold text-white">
+      <p class="mt-3 text-sm font-semibold text-ink">
         {{ t.name }}
       </p>
-      <p class="mt-1 text-xs text-grey-400">
+      <p class="mt-1 text-xs text-muted">
         {{ t.role }}
       </p>
     </li>

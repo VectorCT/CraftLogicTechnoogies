@@ -37,22 +37,22 @@ const faqs = [
     </BaseSection>
     <BaseSection
       title="Common questions"
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
-      <div class="max-w-3xl divide-y divide-navy-800 border-y border-navy-800">
+      <div class="max-w-3xl divide-y divide-line border-y border-line">
         <details
           v-for="f in faqs"
           :key="f.q"
           class="group py-5"
         >
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-white">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-ink">
             {{ f.q }}
             <span
-              class="text-azure-400 transition-transform group-open:rotate-45"
+              class="text-link transition-transform group-open:rotate-45"
               aria-hidden="true"
             >+</span>
           </summary>
-          <p class="mt-3 text-grey-400">
+          <p class="mt-3 text-muted">
             {{ f.a }}
           </p>
         </details>

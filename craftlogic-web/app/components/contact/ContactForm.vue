@@ -1,20 +1,20 @@
 <script setup lang="ts">
 const { form, errors, submit, serviceOptions, isSubmitting, isSuccess, reference, serverError } = useContactForm()
 
-const inputClass = 'mt-1.5 w-full rounded-md border border-navy-700 bg-navy-950 px-3 py-2.5 text-white placeholder:text-grey-400 focus:border-azure-500 aria-invalid:border-danger-400'
+const inputClass = 'mt-1.5 w-full rounded-md border border-line-strong bg-surface-sunken px-3 py-2.5 text-ink placeholder:text-muted focus:border-azure-500 aria-invalid:border-danger'
 </script>
 
 <template>
   <div
     v-if="isSuccess"
     role="status"
-    class="rounded-lg border border-teal-500 bg-navy-800 p-6"
+    class="rounded-lg border border-teal-500 bg-surface-raised p-6"
   >
     <h2 class="text-xl">
       Thanks, we’ve received your enquiry.
     </h2>
-    <p class="mt-2 text-grey-400">
-      Reference: <span class="font-mono text-white">{{ reference }}</span>. We’ll respond within one business day.
+    <p class="mt-2 text-muted">
+      Reference: <span class="font-mono text-ink">{{ reference }}</span>. We’ll respond within one business day.
     </p>
   </div>
 
@@ -150,14 +150,14 @@ const inputClass = 'mt-1.5 w-full rounded-md border border-navy-700 bg-navy-950 
           I consent to CraftLogic Technologies processing my details to respond to this enquiry, as described in the
           <NuxtLink
             to="/privacy"
-            class="text-azure-400 underline"
+            class="text-link underline"
           >Privacy Policy</NuxtLink>. (required)
         </span>
       </label>
       <p
         v-if="errors.popiaConsent"
         id="popia-error"
-        class="mt-1 text-sm text-danger-400"
+        class="mt-1 text-sm text-danger"
       >
         {{ errors.popiaConsent }}
       </p>
@@ -166,7 +166,7 @@ const inputClass = 'mt-1.5 w-full rounded-md border border-navy-700 bg-navy-950 
     <p
       v-if="serverError"
       role="alert"
-      class="rounded-md border border-danger-400 p-3 text-sm text-danger-400"
+      class="rounded-md border border-danger p-3 text-sm text-danger"
     >
       {{ serverError }}
     </p>

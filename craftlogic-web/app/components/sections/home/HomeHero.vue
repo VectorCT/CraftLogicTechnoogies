@@ -6,13 +6,13 @@
     />
     <BaseContainer class="relative grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
       <div>
-        <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-teal-500">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
           Built on Logic. Crafted for Growth.
         </p>
         <h1 class="text-4xl leading-tight md:text-6xl">
           We Build the Systems That Run Your Business
         </h1>
-        <p class="mt-6 max-w-2xl text-lg text-grey-400">
+        <p class="mt-6 max-w-2xl text-lg text-muted">
           Custom software and business systems for South African SMEs. Secure, structured and built to scale.
         </p>
         <div class="mt-10 flex flex-wrap gap-4">

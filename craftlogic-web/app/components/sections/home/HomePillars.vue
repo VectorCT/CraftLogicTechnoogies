@@ -19,12 +19,12 @@ const pillars: { icon: IconName, title: string, body: string }[] = [
       >
         <BaseIcon
           :name="p.icon"
-          class="size-7 text-teal-500"
+          class="size-7 text-accent"
         />
         <h3 class="mt-4 text-lg">
           {{ p.title }}
         </h3>
-        <p class="mt-2 text-sm text-grey-400">
+        <p class="mt-2 text-sm text-muted">
           {{ p.body }}
         </p>
       </BaseCard>

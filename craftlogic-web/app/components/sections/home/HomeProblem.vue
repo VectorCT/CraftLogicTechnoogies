@@ -12,7 +12,7 @@ const problems: { icon: IconName, title: string, body: string }[] = [
     eyebrow="The problem"
     title="Still running your business on spreadsheets?"
     intro="The tools that got you started don’t scale with you. As you grow, manual processes cost more time and carry more risk."
-    class="border-y border-navy-800 bg-navy-950"
+    class="border-y border-line bg-surface-sunken"
   >
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <div
@@ -21,12 +21,12 @@ const problems: { icon: IconName, title: string, body: string }[] = [
       >
         <BaseIcon
           :name="p.icon"
-          class="size-7 text-teal-500"
+          class="size-7 text-accent"
         />
         <h3 class="mt-4 text-lg">
           {{ p.title }}
         </h3>
-        <p class="mt-2 text-sm text-grey-400">
+        <p class="mt-2 text-sm text-muted">
           {{ p.body }}
         </p>
       </div>

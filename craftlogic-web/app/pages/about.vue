@@ -64,7 +64,7 @@ const fit = [
             >
               <BaseIcon
                 name="check"
-                class="mt-0.5 size-4 shrink-0 text-teal-500"
+                class="mt-0.5 size-4 shrink-0 text-accent"
               />{{ f }}
             </li>
           </ul>
@@ -75,20 +75,20 @@ const fit = [
     <BaseSection
       eyebrow="How we work"
       title="Our principles"
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
       <div class="grid gap-6 md:grid-cols-2">
         <BaseCard
           v-for="(p, i) in principles"
           :key="p.title"
         >
-          <p class="font-mono text-sm text-teal-500">
+          <p class="font-mono text-sm text-accent">
             0{{ i + 1 }}
           </p>
           <h3 class="mt-1 text-lg">
             {{ p.title }}
           </h3>
-          <p class="mt-2 text-sm text-grey-400">
+          <p class="mt-2 text-sm text-muted">
             {{ p.body }}
           </p>
         </BaseCard>

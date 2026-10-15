@@ -22,17 +22,17 @@ const nextSteps = [
         >
           <BaseIcon
             :name="c.icon"
-            class="mt-0.5 size-5 shrink-0 text-teal-500"
+            class="mt-0.5 size-5 shrink-0 text-accent"
           />
           <div>
-            <dt class="text-grey-400">
+            <dt class="text-muted">
               {{ c.label }}
             </dt>
-            <dd class="text-white">
+            <dd class="text-ink">
               <a
                 v-if="c.href"
                 :href="c.href"
-                class="hover:text-azure-400"
+                class="hover:text-link"
               >{{ c.value }}</a>
               <span v-else>{{ c.value }}</span>
             </dd>
@@ -50,8 +50,8 @@ const nextSteps = [
           :key="step"
           class="flex gap-3"
         >
-          <span class="font-mono text-teal-500">0{{ i + 1 }}</span>
-          <span class="text-grey-200">{{ step }}</span>
+          <span class="font-mono text-accent">0{{ i + 1 }}</span>
+          <span class="text-body">{{ step }}</span>
         </li>
       </ol>
     </BaseCard>

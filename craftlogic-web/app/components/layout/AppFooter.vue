@@ -8,11 +8,11 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="border-t border-navy-800 bg-navy-950 py-14 text-sm">
+  <footer class="border-t border-line bg-surface-sunken py-14 text-sm">
     <BaseContainer class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
         <AppLogo />
-        <p class="text-grey-400">
+        <p class="text-muted">
           {{ site.tagline }}
         </p>
         <ul
@@ -25,7 +25,7 @@ const year = new Date().getFullYear()
           >
             <a
               :href="s.url"
-              class="hover:text-white"
+              class="hover:text-ink"
               rel="noopener"
               target="_blank"
             >{{ s.label }}</a>
@@ -47,7 +47,7 @@ const year = new Date().getFullYear()
           >
             <NuxtLink
               :to="item.to"
-              class="text-grey-400 hover:text-white"
+              class="text-muted hover:text-ink"
             >{{ item.label }}</NuxtLink>
           </li>
         </ul>
@@ -67,13 +67,13 @@ const year = new Date().getFullYear()
           >
             <NuxtLink
               :to="item.to"
-              class="text-grey-400 hover:text-white"
+              class="text-muted hover:text-ink"
             >{{ item.label }}</NuxtLink>
           </li>
           <li>
             <NuxtLink
               to="/contact"
-              class="text-grey-400 hover:text-white"
+              class="text-muted hover:text-ink"
             >Contact</NuxtLink>
           </li>
         </ul>
@@ -83,7 +83,7 @@ const year = new Date().getFullYear()
         <h2 class="mb-3 text-sm font-semibold">
           Get in touch
         </h2>
-        <ul class="space-y-2 text-grey-400">
+        <ul class="space-y-2 text-muted">
           <li
             v-for="c in channels.filter(ch => ch.icon !== 'clock')"
             :key="c.label"
@@ -91,12 +91,12 @@ const year = new Date().getFullYear()
           >
             <BaseIcon
               :name="c.icon"
-              class="size-4 shrink-0 text-teal-500"
+              class="size-4 shrink-0 text-accent"
             />
             <a
               v-if="c.href"
               :href="c.href"
-              class="hover:text-white"
+              class="hover:text-ink"
             >{{ c.value }}</a>
             <span v-else>{{ c.value }}</span>
           </li>
@@ -104,7 +104,7 @@ const year = new Date().getFullYear()
       </div>
     </BaseContainer>
 
-    <BaseContainer class="mt-12 flex flex-col gap-3 border-t border-navy-800 pt-6 text-grey-400 sm:flex-row sm:items-center sm:justify-between">
+    <BaseContainer class="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-muted sm:flex-row sm:items-center sm:justify-between">
       <p>© {{ year }} {{ site.name }}. All rights reserved.</p>
       <ul class="flex flex-wrap gap-x-6 gap-y-2">
         <li
@@ -113,13 +113,13 @@ const year = new Date().getFullYear()
         >
           <NuxtLink
             :to="item.to"
-            class="hover:text-white"
+            class="hover:text-ink"
           >{{ item.label }}</NuxtLink>
         </li>
         <li>
           <button
             type="button"
-            class="hover:text-white"
+            class="hover:text-ink"
             @click="consent.reset"
           >
             Cookie preferences

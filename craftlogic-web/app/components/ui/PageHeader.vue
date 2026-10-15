@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="relative overflow-hidden border-b border-navy-800 pt-16 pb-12 md:pt-24 md:pb-16">
+  <section class="relative overflow-hidden border-b border-line pt-16 pb-12 md:pt-24 md:pb-16">
     <div
       class="bg-grid pointer-events-none absolute inset-0"
       aria-hidden="true"
@@ -16,7 +16,7 @@ defineProps<{
     <BaseContainer class="relative">
       <p
         v-if="eyebrow"
-        class="mb-3 text-sm font-semibold uppercase tracking-wider text-teal-500"
+        class="mb-3 text-sm font-semibold uppercase tracking-wider text-accent"
       >
         {{ eyebrow }}
       </p>
@@ -25,7 +25,7 @@ defineProps<{
       </h1>
       <p
         v-if="intro"
-        class="mt-5 max-w-2xl text-lg text-grey-400"
+        class="mt-5 max-w-2xl text-lg text-muted"
       >
         {{ intro }}
       </p>

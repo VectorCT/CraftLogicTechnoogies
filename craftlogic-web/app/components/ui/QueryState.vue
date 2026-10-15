@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <p
     v-if="isPending"
-    class="text-grey-400"
+    class="text-muted"
     aria-live="polite"
   >
     Loading…

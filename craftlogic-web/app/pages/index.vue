@@ -21,7 +21,7 @@ usePageSeo({
       eyebrow="Process"
       title="How we work"
       intro="Five clear steps, with defined deliverables at each one."
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
       <ProcessTimeline />
       <BaseButton
@@ -37,7 +37,7 @@ usePageSeo({
       eyebrow="Maintenance"
       title="Support that keeps your systems healthy"
       intro="Predictable monthly plans. We don’t disappear after launch."
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
       <PlanGrid />
     </BaseSection>

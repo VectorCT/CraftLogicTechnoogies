@@ -7,12 +7,12 @@ defineProps<{ metrics: CaseStudyMetric[] }>()
     <div
       v-for="m in metrics"
       :key="m.label"
-      class="rounded-md border border-navy-700 bg-navy-900 p-4"
+      class="rounded-md border border-line-strong bg-surface p-4"
     >
-      <dt class="text-xs uppercase tracking-wider text-grey-400">
+      <dt class="text-xs uppercase tracking-wider text-muted">
         {{ m.label }}
       </dt>
-      <dd class="mt-1 font-heading text-xl font-bold text-white">
+      <dd class="mt-1 font-heading text-xl font-bold text-ink">
         {{ m.value }}
       </dd>
     </div>

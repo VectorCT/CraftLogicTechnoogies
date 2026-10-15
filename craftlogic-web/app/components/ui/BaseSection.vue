@@ -15,7 +15,7 @@ defineProps<{
       >
         <p
           v-if="eyebrow"
-          class="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-500"
+          class="mb-2 text-sm font-semibold uppercase tracking-wider text-accent"
         >
           {{ eyebrow }}
         </p>
@@ -24,7 +24,7 @@ defineProps<{
         </h2>
         <p
           v-if="intro"
-          class="mt-4 text-grey-400"
+          class="mt-4 text-muted"
         >
           {{ intro }}
         </p>

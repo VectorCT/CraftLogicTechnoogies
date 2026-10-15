@@ -6,12 +6,12 @@ withDefaults(defineProps<{ service: Service, compact?: boolean }>(), { compact: 
   <BaseCard class="flex flex-col">
     <BaseIcon
       :name="service.icon"
-      class="size-8 text-teal-500"
+      class="size-8 text-accent"
     />
     <h3 class="mt-4 text-xl">
       {{ service.title }}
     </h3>
-    <p class="mt-3 text-grey-400">
+    <p class="mt-3 text-muted">
       {{ service.summary }}
     </p>
     <ul
@@ -25,13 +25,13 @@ withDefaults(defineProps<{ service: Service, compact?: boolean }>(), { compact: 
       >
         <BaseIcon
           name="check"
-          class="size-4 shrink-0 text-teal-500"
+          class="size-4 shrink-0 text-accent"
         />{{ outcome }}
       </li>
     </ul>
     <NuxtLink
       :to="`/services/${service.slug}`"
-      class="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-medium text-azure-400 hover:text-white"
+      class="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-medium text-link hover:text-ink"
     >
       Learn more<span class="sr-only"> about {{ service.title }}</span>
       <BaseIcon

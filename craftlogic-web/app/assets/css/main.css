@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-/* Brand tokens — see section 6 of CRAFTLOGIC_PROJECT_PLAN.md */
+/* `light:` variant, active when <html data-theme="light"> (set by the inline head script / useTheme). */
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+/* Brand tokens — see section 6 of CRAFTLOGIC_PROJECT_PLAN.md. Fixed across themes. */
 @theme {
   --color-navy-950: #0B1222;
   --color-navy-900: #0F172A;
@@ -15,14 +18,47 @@
   --color-grey-400: #94A3B8;
   --color-danger-400: #F87171;
 
+  /*
+   * Semantic tokens — use these in components so they follow the active theme.
+   * Defaults are the dark theme; light values are overridden below.
+   */
+  --color-surface: var(--color-navy-900);
+  --color-surface-sunken: var(--color-navy-950);
+  --color-surface-raised: var(--color-navy-800);
+  --color-line: var(--color-navy-800);
+  --color-line-strong: var(--color-navy-700);
+  --color-ink: #FFFFFF;
+  --color-body: var(--color-grey-200);
+  --color-muted: var(--color-grey-400);
+  --color-accent: var(--color-teal-500);
+  --color-link: var(--color-azure-400);
+  --color-danger: var(--color-danger-400);
+
   /* Self-hosted via @fontsource-variable (see nuxt.config.ts) */
   --font-heading: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Light theme: text colours chosen for WCAG AA contrast on white / slate-100. */
+:root[data-theme="light"] {
+  --color-surface: #FFFFFF;
+  --color-surface-sunken: #F1F5F9;
+  --color-surface-raised: #F8FAFC;
+  --color-line: #E2E8F0;
+  --color-line-strong: #CBD5E1;
+  --color-ink: #0F172A;
+  --color-body: #334155;
+  --color-muted: #64748B;
+  --color-accent: #0F766E;
+  --color-link: #1D4ED8;
+  --color-danger: #DC2626;
+  color-scheme: light;
+}
+
 @layer base {
   html {
-    @apply bg-navy-900 text-grey-200 font-sans antialiased;
+    @apply bg-surface text-body font-sans antialiased;
+    color-scheme: dark;
     scroll-behavior: smooth;
   }
 
@@ -33,7 +69,7 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-heading font-bold text-white tracking-tight;
+    @apply font-heading font-bold text-ink tracking-tight;
   }
 
   :focus-visible {
@@ -45,15 +81,21 @@
   /* Subtle structured grid used behind heroes */
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgb(51 65 85 / 0.25) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(51 65 85 / 0.25) 1px, transparent 1px);
+      linear-gradient(to right, color-mix(in oklab, var(--color-line-strong) 25%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-line-strong) 25%, transparent) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
   }
 
+  [data-theme="light"] .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--color-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
+  }
+
   /* Long-form copy (privacy policy, about) */
   .prose-cl {
-    @apply max-w-3xl leading-relaxed text-grey-200;
+    @apply max-w-3xl leading-relaxed text-body;
   }
   .prose-cl h2 {
     @apply mt-12 mb-4 text-2xl;
@@ -70,9 +112,9 @@
     @apply list-disc space-y-1 pl-6;
   }
   .prose-cl a {
-    @apply text-azure-400 underline underline-offset-2 hover:text-white;
+    @apply text-link underline underline-offset-2 hover:text-ink;
   }
   .prose-cl strong {
-    @apply font-semibold text-white;
+    @apply font-semibold text-ink;
   }
 }

@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<{
 
 const variants = {
   primary: 'bg-azure-600 text-white hover:bg-azure-500',
-  secondary: 'border border-navy-700 text-grey-200 hover:border-azure-500 hover:text-white',
+  secondary: 'border border-line-strong text-body hover:border-azure-500 hover:text-ink',
   inverse: 'bg-white text-navy-900 hover:bg-grey-200 focus-visible:outline-white',
 }
 

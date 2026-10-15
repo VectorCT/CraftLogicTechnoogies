@@ -16,13 +16,13 @@ defineProps<{ plan: MaintenancePlan & { priceLabel: string } }>()
     <h3 class="text-xl">
       {{ plan.name }}
     </h3>
-    <p class="mt-1 text-sm text-grey-400">
+    <p class="mt-1 text-sm text-muted">
       {{ plan.summary }}
     </p>
-    <p class="mt-4 text-2xl font-semibold text-white">
+    <p class="mt-4 text-2xl font-semibold text-ink">
       {{ plan.priceLabel }}<span
         v-if="plan.priceZar !== null"
-        class="text-sm text-grey-400"
+        class="text-sm text-muted"
       > / month excl. VAT</span>
     </p>
     <ul class="mt-5 space-y-2 text-sm">
@@ -33,7 +33,7 @@ defineProps<{ plan: MaintenancePlan & { priceLabel: string } }>()
       >
         <BaseIcon
           name="check"
-          class="mt-0.5 size-4 shrink-0 text-teal-500"
+          class="mt-0.5 size-4 shrink-0 text-accent"
         />{{ feature }}
       </li>
     </ul>

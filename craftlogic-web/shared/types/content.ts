@@ -6,6 +6,7 @@ export type ServiceSlug = 'business-websites' | 'custom-systems' | 'api-integrat
 export type IconName
   = | 'globe' | 'layers' | 'plug' | 'shield' | 'check' | 'arrow-right' | 'mail' | 'chat'
     | 'map-pin' | 'clock' | 'menu' | 'close' | 'cloud' | 'database' | 'lock' | 'copy' | 'chart' | 'users'
+    | 'sun' | 'moon'
 
 export interface Service {
   slug: ServiceSlug

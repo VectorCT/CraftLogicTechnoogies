@@ -13,11 +13,11 @@ const { study, isPending, isError } = useFeaturedCaseStudy()
     >
       <div
         v-if="study"
-        class="grid gap-8 rounded-xl border border-navy-700 bg-navy-800 p-6 md:p-10 lg:grid-cols-[1.4fr_1fr]"
+        class="grid gap-8 rounded-xl border border-line-strong bg-surface-raised p-6 md:p-10 lg:grid-cols-[1.4fr_1fr]"
       >
         <div>
           <div class="flex items-center gap-3">
-            <p class="text-sm text-teal-500">
+            <p class="text-sm text-accent">
               {{ study.industry }}
             </p>
             <SampleBadge v-if="study.isSample" />
@@ -25,7 +25,7 @@ const { study, isPending, isError } = useFeaturedCaseStudy()
           <h3 class="mt-2 text-2xl">
             {{ study.title }}
           </h3>
-          <p class="mt-4 text-grey-400">
+          <p class="mt-4 text-muted">
             {{ study.problem }}
           </p>
           <BaseButton

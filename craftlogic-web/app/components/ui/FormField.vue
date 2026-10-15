@@ -23,17 +23,17 @@ const describedBy = computed(() =>
   <div>
     <label
       :for="id"
-      class="block text-sm font-medium text-white"
+      class="block text-sm font-medium text-ink"
     >
       {{ label }}<span
         v-if="required"
-        class="text-grey-400"
+        class="text-muted"
       > (required)</span>
     </label>
     <p
       v-if="hint"
       :id="hintId"
-      class="mt-0.5 text-xs text-grey-400"
+      class="mt-0.5 text-xs text-muted"
     >
       {{ hint }}
     </p>
@@ -45,7 +45,7 @@ const describedBy = computed(() =>
     <p
       v-if="error"
       :id="errorId"
-      class="mt-1 text-sm text-danger-400"
+      class="mt-1 text-sm text-danger"
     >
       {{ error }}
     </p>

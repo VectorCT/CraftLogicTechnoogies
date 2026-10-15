@@ -30,7 +30,7 @@ usePageSeo({
 
     <BaseSection>
       <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
-        <div class="space-y-4 text-lg text-grey-200">
+        <div class="space-y-4 text-lg text-body">
           <p
             v-for="para in service.description"
             :key="para"
@@ -42,7 +42,7 @@ usePageSeo({
           <h2 class="text-lg">
             Signs you need this
           </h2>
-          <ul class="mt-4 space-y-3 text-sm text-grey-200">
+          <ul class="mt-4 space-y-3 text-sm text-body">
             <li
               v-for="p in service.problems"
               :key="p"
@@ -60,7 +60,7 @@ usePageSeo({
 
     <BaseSection
       title="What’s included"
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
       <div class="grid gap-12 lg:grid-cols-2">
         <ul class="space-y-3">
@@ -71,28 +71,28 @@ usePageSeo({
           >
             <BaseIcon
               name="check"
-              class="mt-0.5 size-5 shrink-0 text-teal-500"
+              class="mt-0.5 size-5 shrink-0 text-accent"
             />{{ i }}
           </li>
         </ul>
         <div>
-          <h3 class="text-sm font-semibold uppercase tracking-wider text-grey-400">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-muted">
             Outcomes
           </h3>
           <ul class="mt-4 flex flex-wrap gap-3">
             <li
               v-for="o in service.outcomes"
               :key="o"
-              class="rounded-full border border-navy-700 bg-navy-800 px-4 py-1.5 text-sm text-white"
+              class="rounded-full border border-line-strong bg-surface-raised px-4 py-1.5 text-sm text-ink"
             >
               {{ o }}
             </li>
           </ul>
-          <p class="mt-8 text-grey-400">
+          <p class="mt-8 text-muted">
             Every project follows our five-step process, from discovery to ongoing maintenance.
             <NuxtLink
               to="/process"
-              class="text-azure-400 underline underline-offset-2 hover:text-white"
+              class="text-link underline underline-offset-2 hover:text-ink"
             >See how we work</NuxtLink>.
           </p>
         </div>

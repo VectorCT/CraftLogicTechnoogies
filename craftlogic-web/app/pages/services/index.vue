@@ -18,7 +18,7 @@ usePageSeo({
     <BaseSection
       eyebrow="Technology"
       title="Built on the Microsoft platform"
-      class="bg-navy-950"
+      class="bg-surface-sunken"
     >
       <TechStackStrip />
     </BaseSection>

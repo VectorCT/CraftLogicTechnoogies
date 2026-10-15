@@ -22,7 +22,7 @@ const lastUpdated = '14 October 2026'
     <BaseSection>
       <!-- TODO (T-207): DRAFT. Have this reviewed by a POPIA practitioner before launch,
            confirm the Information Officer and registration with the Information Regulator. -->
-      <p class="mb-10 max-w-3xl rounded-md border border-dashed border-grey-400 p-4 text-sm text-grey-400">
+      <p class="mb-10 max-w-3xl rounded-md border border-dashed border-muted p-4 text-sm text-muted">
         Draft policy pending legal review.
       </p>
 

@@ -8,7 +8,7 @@ const consent = useConsentStore()
       v-if="!consent.hasDecided"
       role="dialog"
       aria-label="Cookie consent"
-      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-2xl rounded-lg border border-navy-700 bg-navy-800 p-5 shadow-xl"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-2xl rounded-lg border border-line-strong bg-surface-raised p-5 shadow-xl"
     >
       <p class="text-sm">
         We use essential cookies to run this site and, with your permission, analytics cookies to improve it.

@@ -8,7 +8,7 @@
   >
     <title id="hero-diagram-title">Diagram: a central business system connected to Microsoft 365, accounting, reporting and an Azure SQL database</title>
     <g
-      stroke="#334155"
+      class="stroke-line-strong"
       stroke-width="1.5"
       fill="none"
     >
@@ -53,13 +53,12 @@
           width="120"
           height="50"
           rx="8"
-          fill="#1E293B"
-          stroke="#334155"
+          class="fill-surface-raised stroke-line-strong"
         />
         <text
           x="80"
           y="65"
-          fill="#E5E7EB"
+          class="fill-body"
         >Microsoft 365</text>
       </g>
       <g>
@@ -69,13 +68,12 @@
           width="120"
           height="50"
           rx="8"
-          fill="#1E293B"
-          stroke="#334155"
+          class="fill-surface-raised stroke-line-strong"
         />
         <text
           x="340"
           y="65"
-          fill="#E5E7EB"
+          class="fill-body"
         >Accounting</text>
       </g>
       <g>
@@ -85,13 +83,12 @@
           width="120"
           height="50"
           rx="8"
-          fill="#1E293B"
-          stroke="#334155"
+          class="fill-surface-raised stroke-line-strong"
         />
         <text
           x="80"
           y="285"
-          fill="#E5E7EB"
+          class="fill-body"
         >Azure SQL</text>
       </g>
       <g>
@@ -101,13 +98,12 @@
           width="120"
           height="50"
           rx="8"
-          fill="#1E293B"
-          stroke="#334155"
+          class="fill-surface-raised stroke-line-strong"
         />
         <text
           x="340"
           y="285"
-          fill="#E5E7EB"
+          class="fill-body"
         >Reporting</text>
       </g>
       <g>
@@ -117,21 +113,21 @@
           width="150"
           height="70"
           rx="10"
-          fill="#0F172A"
+          class="fill-surface"
           stroke="#2563EB"
           stroke-width="2"
         />
         <text
           x="210"
           y="166"
-          fill="#FFFFFF"
+          class="fill-ink"
           font-weight="600"
           font-size="14"
         >Your business</text>
         <text
           x="210"
           y="186"
-          fill="#FFFFFF"
+          class="fill-ink"
           font-weight="600"
           font-size="14"
         >system</text>

@@ -17,7 +17,7 @@ withDefaults(defineProps<{
   <section class="bg-azure-600 py-16">
     <BaseContainer class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
       <div class="max-w-2xl">
-        <h2 class="text-3xl">
+        <h2 class="text-3xl text-white">
           {{ title }}
         </h2>
         <p
